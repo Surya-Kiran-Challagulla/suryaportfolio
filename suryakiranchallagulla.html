@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Surya Kiran Challagulla Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Surya Kiran Challagulla</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/surya.png); height: 100px;">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Surya Kiran Challagulla</span></h1>
+						<br>
+						<h2>Full Stack Developer</h2>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+						
+
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Engineer by Profession ',
+						'Artist by Passion  ',
+						// 'Baker     ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            
+						
+			           		<ul class="ftco-footer-social list-unstyled d-flex align-items-center mb-0">
+								
+								<li class="ftco-animate"><a href="https://www.linkedin.com/in/surya-c-7202b2190/"><span class="icon-linkedin"></span></a></li>  
+								<li class="ftco-animate"><a href="mailto:challagullasuryakiran@gmail.com"><span class="icon-envelope"></span></a></li> 
+								<li class="ftco-animate"><a href="https://github.com/Surya-Kiran-Challagulla"><span class="icon-github"></span></a></li>
+							  </ul>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<!-- <div class="row">
+				<div class="row d-flex align-items-stretch">
+				<div class="row d-flex"> -->
+					
+						<div class="row justify-content-center pb-5">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big big-2 text-center ">About</h1>
+								<h2 class="mb-4 text-center ">About Me</h2>
+								
+								<p class="text-center" > As a Full Stack Developer with 3+ years of hands-on industry experience, my expertise has been in converting complex data into actionable insights. 
+									With a passion for achieving real, tangible results, I enjoy diving into data and bring out meaningful patterns and trends. 
+									My expertise extends to creating interactive dashboards with PowerBI enables users to intuitively explore and understand data by using different engaging visual tools.</p>
+								
+									<div class="row">
+										<h1 class="big-4">Skills</h1>
+										<div class="underline"></div>
+									</div>
+									<br>
+
+									<div class="row">
+										<!-- <div class="col-md-6"> -->
+											<div class="resume-wrap ftco-animate">
+												<ul class="about-info mt-4 px-md-0 px-2">
+												<li ><span>Scripting, Databases: &emsp;  </span> <span>Python R, SQL, PL/SQL, MongoDB, Firebase, NoSQL, Snowflake, Redshift, SparkSQL, &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;BIG DATA technologies: Apache Hadoop, Hive, Spark</span></li>
+												<li ><span>Methodologies:       &emsp;&emsp;&emsp;&emsp;</span> <span>SDLC, Agile, JIRA, Jenkins, Git, Bitbucket, Jupyter Notebook, GitLab, Unix, Linux, Bash</span></li>
+												<li ><span>Cloud Platforms:		&emsp;&emsp;&emsp;&nbsp;</span> <span>Informatica Cloud (IICS), Cloud Data Integration, CI/CD, Azure Dev Ops, ETL, AWS EC2, S3, ECR, Data &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;Warehousing</span></li>
+												<li ><span>Data Science skills:	&emsp;&emsp;</span> <span>Data collection and Preparation, Data processing and Modeling, Data Analysis and Visualization, &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;Communicating Data Insights, Statistical modeling, RDBMS, tracking KPIs / Metrics, PBI</span></li>
+												<li ><span>Libraries &amp; Tools:	&emsp;&emsp;&emsp;&nbsp;</span> <span>Power BI, Tableau, Excel VBA, Pivot Tables, Lookups, Matplotlib, NumPy, Pandas, Scikit-learn, Machine learning &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;OpenCV, Haarcascade model</span></li>
+												<li ><span>Others:				&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span> <span>Data Governance, Quality Assurance, Web scrapping, Troubleshooting, PowerPoint, Word</span></li>
+											</ul>
+										</div>
+									</div>
+
+
+							</div>
+						</div>
+						<!-- <div class="row justify-content-center mt-5">
+							<div class="col-md-6 text-center ftco-animate">
+								<p><a href="#" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div> -->
+						<!-- <div class="counter-wrap text-center ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="30">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p> 
+								<p><a href="https://www.linkedin.com/in/surya-c-7202b2190/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div> -->
+					<!-- </div> -->
+				<!-- </div>
+			</div>
+		</div> -->
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>With over 3+ years of experience as a Software Developer specializing in building resilient applications and systems, 
+				I am excited to leverage my skills in AI to drive innovation and maintain high standards in a dynamic software development environment from requirements gathering to shipping code to production using industry practices.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Work Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<!-- <div class="col-md-6"> -->
+					<div class="resume-wrap ftco-animate">
+						<span class="date">01/2023 - 05/2024</span>
+						<h2>Jr.Full Stack Developer</h2>
+						<span class="position">Zendesk, NJ, United States</span>
+						<ul>
+								<li>Involved in creating dynamic website design and programming using HTML5, CSS3, ReactJS, and JQuery.</li>
+								<li>Implemented and maintained the monitoring and alerting of production and corporate servers/storage using AWS Cloud watch. 
+									Active in writing optimized SQL queries for data retrieval and manipulation.</li>
+								<li>Built a data visualization tool utilizing Python and Matplotlib to exhibit complicated genomic data in intuitive visuals,
+									boosting researcher interpretability and stakeholder presentations.</li>
+								<li>Production support for Informatics workflows running on GCP, implementing monitoring and logging solutions
+									with GCP's Stack driver and Cloud Monitoring tools.</li>
+								<li>Used Apache JMeter for load testing and log4J for debugging with various levels. 
+									Used Subversion for version control across common source code used by developers and deployed the applications on WebLogic Application
+									Server. Utilized Gradle for continuous integration.</li>
+								<li>Implemented RESTful API services to facilitate smooth integration of third-party data, 
+									thereby enhancing the application's capabilities for end-users.
+									Tested REST services using google chrome’s POSTMAN plugin.</li>
+							<li>Designed microservices architecture using Spring Boot, resulting in modular, scalable, and easily maintainable
+								codebases that improved system resilience and deployment flexibility</li>
+						</ul>
+						</p>
+					</div>
+
+				<!-- </div> -->
+				 <!-- <div class="col-md-6"> -->
+					<div class="resume-wrap ftco-animate">
+						<span class="date">02/2022 - 12/2022</span>
+						<h2>Graduate Teaching Assistant</h2>
+						<span class="position">University of Maryland Baltimore County, MD, United States</span>
+						<ul>
+								<li>Trained 80 students in Computer Organization and Assembly Language, enhancing their technical skills.</li>
+								<li>Designed Power BI dashboards, increasing student performance analysis reliability by 30%.</li>
+								<li>Partnered with a professor in project grading and increased student performance by 20% through innovative data visualization techniques, demonstrating effective communication and teamwork in a technology-driven environment.</li>
+							<li>Technologies used: Power BI, Excel, Google sheets, Data collections, Data modeling, Data Visualization</li>
+						</ul>
+						</p>
+					</div>
+
+				<!-- </div> -->
+
+				<!-- <div class="col-md-6"> -->
+					<div class="resume-wrap ftco-animate">
+						<span class="date">11/2020 - 07/2022</span>
+						<h2>Software Systems Engineer</h2>
+						<span class="position">Infosys, Hyderabad, India</span>
+						<ul>
+								<li>Designing, developing, and deploying web-based Client-Server business applications using OOP, Java/J2EE technologies.</li>
+								<li>Developed the functionalities under Agile Methodology, and JIRA processes, and used JIRA for task assignment, Bug tracking, and fixture.</li>
+								<li>Developed automated CI/CD pipelines with Jenkins and Docker, reducing release cycles from bi-monthly to weekly and significantly speeding up software delivery.</li>
+								<li>Designed reusable components using ReactJS for Single Page Application and worked on multiple functionalities for TelebuHub client management and became the primary owner.</li>
+								<li>Discovered and resolved issues in legacy Python code, reducing technical debt and improving code maintainability by 12%.</li>
+						</ul>
+						</p>
+					</div>
+
+				<!-- </div> -->
+				<div class="resume-wrap ftco-animate">
+					<span class="date">10/2019 - 12/2021</span>
+					<h2>Intern</h2>
+					<span class="position">Infosys Pvt Ltd., Mysore, India</span>
+						<ul>
+							<li>Conducted comprehensive requirement gathering, achieving 95% project deliverable accuracy, developed forecasting models with 90% prediction accuracy, and implemented data warehousing solutions enhancing data reliability by 40%.</li>
+							<li>Created end-to-end reports using Power BI and SQL Server, reducing report generation time by 40%, improving data accuracy by 25%, and automating processes to cut manual effort by 50%.</li>
+							<li>Retrieved and analyzed large datasets using SQL, Python, and R, built and managed KPIs to enhance operational transparency by 20%, and identified process improvements with internal teams, increasing efficiency by 20%.</li>
+							<li>Technologies used: Power BI, SQL, Excel, tracking KPIs, Data modeling, data warehousing Communication, Data Gathering, Data Visualization</li>
+						</ul>
+					</p>
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2022-2023</span>
+    					<h2>Master Of Science | Computer Science</h2>
+    					<span class="position">University of Maryland Baltimore County  MD, United States</span>
+						<li><h4>Coursework:</h4> Adv. Algorithms, Distributed Systems, Neural Networks, Data Science, Data Analytics, Adv. Computer Architecture, Numerical Computation, Machine Learning, Artificial Intelligence.</li>
+						<li></li>
+    					<p class="mt-4">GPA: 3.7/4</p>
+    				</div>
+				</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2016-2020</span>
+    					<h2>Bachelor of Technology | Computer Science  & Engineering</h2>
+    					<span class="position">K L E F Deemed To Be University Deemed university in Guntur, India</span>
+    					<p class="mt-4">GPA: 3.5/4</p>
+    				</div>
+    			</div>
+
+    			
+    		</div>
+			<div class="row">
+				<h1 class="big-4">Certifications</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+			
+			<div class="row">
+					<!-- <div class="col-md-6"> -->
+						<div class="resume-wrap ftco-animate">
+							<ul>
+								<li>Google Data Analytics Professional Certification</li>
+								<li>Complete Python & SQL Bootcamp at Infosys</li>
+								<li>Prepare for the AWS Certified Cloud Practitioner</li>
+							</ul>
+						</div>
+			</div>
+			
+
+    		<!-- <div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div> -->
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample projects in various domains</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Surya-Kiran-Challagulla/MicrosoftMalwareDetection" class="block-20 zoom-effect" style="background-image: url('images/mwd.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Surya-Kiran-Challagulla/MicrosoftMalwareDetection">MicrosoftMalwareDetection</a></h3>
+                <p>The term malware is a contraction of malicious software. Put simply,
+					malware is any piece of software that was written with the intent of doing harm to data, devices or to people.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Surya-Kiran-Challagulla/Client-Server-Token-Manager" class="block-20 zoom-effect" style="background-image: url('images/cstm.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Surya-Kiran-Challagulla/Client-Server-Token-Manager">Client-Server-Token-Manager</a></h3>
+                <p>The Client-Server Token Manager is a system built to securely handle authentication tokens between clients and servers. 
+					It manages the issuance, renewal, and validation of tokens, ensuring controlled access to services. By centralizing token management, this system strengthens security,
+					 prevents unauthorized access, and streamlines the authentication process for enhanced overall system protection.</p>
+              </div>
+            </div>
+          </div>
+		<div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/dsp.webp');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="#">Data Analysis with Spark</a></h3>
+                <p>Conducted analysis of IPL data, identifying all the KPIs and visualize data insights, revealing trends andpatterns </p>
+              </div>
+            </div>
+          </div>
+        
+	      <br>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/usbl.webp');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="#">US Bank Loan Performance using Tableau | Domain: Finance</a></h3>
+                <p>Conducted analysis of bank loan performance, identifying all the KPIs and recommended the risk management improvements</p>
+              </div>
+            </div>
+          </div>
+        
+	
+		<!-- added justify-content-center to center align the last two projects -->
+		
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/Surya-Kiran-Challagulla/Distributed-File-system-Phase-1-2" class="block-20 zoom-effect" style="background-image: url('images/dfs.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/Surya-Kiran-Challagulla/Distributed-File-system-Phase-1-2">Distributed-File-system-Phase-1-2</a></h3>
+				  <p>Data cleaning and exploration on raw data having about a 1 million rows using SQL Server to transform and prepare the data for further analysis</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="#" class="block-20 zoom-effect" style="background-image: url('images/ddd.jpeg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="#">Driver Drowsiness Detection | Domain: ML</a></h3>
+				  <p>A web-based prototype utilizing OpenCV and Haarcascade for real-time detection of driver drowsiness by tracking eye closure and yawning patterns.</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+		</div>
+    </section>
+
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Baltimore, MD, United States</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://+16823448850">+1 (682)-344-8850</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:SuryaKiranChallagulla@gmail.com">SuryaKiranChallagulla@gmail.com</a></p>
+	          </div>
+          </div>
+         <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="#">resume</a></p>
+	          </div>
+          </div> 
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<!-- <div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div> -->
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/surya-c-7202b2190/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://github.com/Surya-Kiran-Challagulla"><span class="icon-github"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="icon-heart color-danger" aria-hidden="true"></i> Surya Kiran Challagulla</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
